@@ -79,11 +79,15 @@
 }
 
 .pokemon {
-    display: flex;
-    flex-direction: column;
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+}
+
+.pokemon a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .pokemon .number {
@@ -137,13 +141,20 @@
 }
 
 .pagination button {
-    padding: .25rem .5rem;
+    padding: 1rem 2rem;
     margin: .25rem 0;
-    font-size: .625rem;
+    font-size: 1rem;
     color: #fff;
-    background-color: #6c79db;
+    background-color: red;
     border: none;
+    cursor: pointer;
     border-radius: 1rem;
+    transition: 1s ease-in-out;
+}
+
+.pagination button:hover {
+    background-color: rgb(139, 3, 3);
+    transition: 1s ease-in-out;
 }
 
 @media screen and (min-width: 380px) {
