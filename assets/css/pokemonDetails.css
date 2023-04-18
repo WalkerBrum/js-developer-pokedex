@@ -81,8 +81,46 @@
     background-color: #f9aec7;
 }
 
-.menu {
+.info-top .menu {
     display: flex;
     justify-content: space-between;
     font-size: 1.1rem;
 }
+
+.info-pokemon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.info-pokemon .name-types {
+    display: flex;
+    flex-direction: column; 
+    gap: .5rem;
+}
+
+.info-pokemon .name-types .name {
+    margin: 0;
+    font-weight: bolder;
+    font-size: 1.8rem;
+}
+
+.info-pokemon .name-types .types {
+    display: flex;
+    list-style: none; 
+    margin: 0;
+    padding-left: .5em;
+    gap: .5rem;
+}
+
+.info-top .info-pokemon .name-types .types .type {
+    color: #fff;
+    padding: .4rem 1rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    background-color: #ee7f30;
+}
+
