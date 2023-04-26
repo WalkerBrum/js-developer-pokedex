@@ -7,6 +7,7 @@
 .info-top {
     padding: 2rem;
     color: white;
+    height: 20rem;
 }
 
 .normal {
@@ -87,6 +88,11 @@
     font-size: 1.1rem;
 }
 
+.info-top .menu a {
+    text-decoration: none;
+    color: white;
+}
+
 .info-pokemon {
     display: flex;
     justify-content: space-between;
@@ -124,3 +130,70 @@
     background-color: #ee7f30;
 }
 
+.info-top .photo-pokemon {
+    margin: 1rem;
+    padding-left: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-bottom {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.info-bottom .about {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.info-bottom h3 {
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+
+.info-bottom .about .info-about {
+    display: flex;
+    justify-content: flex-start;
+    height: 1.5rem;
+}
+
+.info-bottom .about .title-about {
+    opacity: 0.5;
+    width: 6rem;
+}
+
+.info-bottom .about .value-about {
+    opacity: 0.8;
+}
+
+.info-bottom .base-stats .info-stats{
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-bottom .base-stats .info-stats .name-stats{
+    width: 5rem;
+    height: 1.5rem;
+    opacity: 0.5;
+}
+
+.info-bottom .base-stats .info-stats .status-bar {
+    margin: .3rem 0; 
+    margin-left: .5rem;
+    width: 60%;
+    height: .35rem;
+    border-radius: .35rem;
+    background-color: rgb(233, 233, 233);
+}
+
+.info-bottom .base-stats .info-stats .status-bar .progress-bar {
+    height: 100%;
+    border-radius: .35rem;
+    background-color: red;
+    width: 30%;
+}
