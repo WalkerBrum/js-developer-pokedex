@@ -107,6 +107,7 @@
 }
 
 .info-pokemon .name-types .name {
+    text-transform: capitalize;
     margin: 0;
     font-weight: bolder;
     font-size: 1.8rem;
@@ -127,7 +128,6 @@
     font-size: .625rem;
     border-radius: 1rem;
     filter: brightness(1.1);
-    background-color: #ee7f30;
 }
 
 .info-top .photo-pokemon {
@@ -136,6 +136,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.info-top .photo-pokemon .poke-img {
+    width: 15rem;
+    height: 13rem;
 }
 
 .info-bottom {
@@ -171,15 +176,21 @@
     opacity: 0.8;
 }
 
-.info-bottom .base-stats .info-stats{
+.info-bottom .base-stats .info-stats {
     display: flex;
     justify-content: space-between;
 }
 
-.info-bottom .base-stats .info-stats .name-stats{
-    width: 5rem;
+.info-bottom .base-stats .info-stats .name-stats {
+    text-transform: capitalize;
+    width: 9rem;
     height: 1.5rem;
     opacity: 0.5;
+}
+
+.info-bottom .base-stats .info-stats .value-stats {
+    margin: 0 .5rem;
+
 }
 
 .info-bottom .base-stats .info-stats .status-bar {
@@ -195,5 +206,5 @@
     height: 100%;
     border-radius: .35rem;
     background-color: red;
-    width: 30%;
+    width: 80%;
 }
