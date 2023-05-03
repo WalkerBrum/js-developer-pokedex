@@ -2,10 +2,12 @@ const pokemonList = document.getElementById('pokemonList');
 const poke = document.getElementById('poke');
 
 function convertPokemonHomeToLi(pokemon) {
+    const number = numberBeforeId(pokemon.id);
+
     return `
         <li class="pokemon ${pokemon.type}" id="poke">
-            <a href="pokemon.html?id=${pokemon.number}" >
-                <span class="number">#${pokemon.number}</span>
+            <a href="pokemon.html?id=${pokemon.id}" >
+                <span class="number">#${number}${pokemon.id}</span>
                 <span class="name">${pokemon.name}</span>
                 <div class="detail">
                     <ol class="types">

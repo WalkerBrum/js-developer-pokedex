@@ -202,9 +202,66 @@
     background-color: rgb(233, 233, 233);
 }
 
-.info-bottom .base-stats .info-stats .status-bar .progress-bar {
+.info-bottom .base-stats .info-stats .status-bar .progress-bar-hp {
     height: 100%;
     border-radius: .35rem;
     background-color: red;
     width: 80%;
+}
+
+.info-bottom .base-stats .info-stats .status-bar .progress-bar-attack {
+    height: 100%;
+    border-radius: .35rem;
+    background-color: red;
+    width: 80%;
+}
+
+.info-bottom .base-stats .info-stats .status-bar .progress-bar-defense {
+    height: 100%;
+    border-radius: .35rem;
+    background-color: red;
+    width: 80%;
+}
+
+.info-bottom .base-stats .info-stats .status-bar .progress-bar-special-attack {
+    height: 100%;
+    border-radius: .35rem;
+    background-color: red;
+    width: 80%;
+}
+
+.info-bottom .base-stats .info-stats .status-bar .progress-bar-special-defense {
+    height: 100%;
+    border-radius: .35rem;
+    background-color: red;
+    width: 80%;
+}
+
+.info-bottom .base-stats .info-stats .status-bar .progress-bar-speed {
+    height: 100%;
+    border-radius: .35rem;
+    background-color: red;
+    width: 80%;
+}
+
+@media screen and (max-width: 380px) {
+    .info-bottom .base-stats .info-stats .name-stats {
+        width: 10rem;
+        height: 1.5rem;
+        opacity: 0.5;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .info-top .photo-pokemon .poke-img {
+        width: 25rem;
+        height: 18rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .info-top .photo-pokemon .poke-img {
+        width: 25rem;
+        height: 22rem;
+    }
 }

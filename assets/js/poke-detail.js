@@ -2,6 +2,8 @@ const pokemonList = document.getElementById('pokemonDetail');
 const baseStatsWidth = document.querySelector('.progress-bar')
 
 function convertPokemonDetailToLi(pokemon) {
+    const number = numberBeforeId(pokemon.id);
+
     return `
         <div class="info-top ${pokemon.type}">
             <section class="menu">
@@ -15,7 +17,7 @@ function convertPokemonDetailToLi(pokemon) {
                         ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                     </ul>
                 </div>
-                <span class="id">#${pokemon.id}</span>
+                <span class="id">#${number}${pokemon.id}</span>
             </section>
             <section class="photo-pokemon">
                 <img src="${pokemon.photo}"
@@ -40,27 +42,28 @@ function convertPokemonDetailToLi(pokemon) {
             </div>
             <h3>Base Stats</h3>
             <div class="base-stats">
-                ${pokemon.baseStats.map((stats) => {`
+                ${pokemon.baseStats.map((stats) => (`
                     <div class="info-stats">
                         <span class="name-stats">${stats[0].replace('-', ' ')}</span>
                         <span class="value-stats">${stats[1]}</span>
                         <div class="status-bar">
-                            <div class="progress-bar"></div>
+                            <div class="progress-bar-${stats[0]}"id="progress-bar-${stats[0]}"></div>
                         </div>
                     </div>
-                `}).join('')}
-                
+                `)).join('')}
             </div>
-
         </div>
     `;
 }
 
 function loadInfoPokemon(id) {
-    pokeApi.getInfoPokemon(id).then((pokemon) => {
+    pokeApi.getInfoPokemon(id)
+    .then((pokemon) => {
         const newHtml = convertPokemonDetailToLi(pokemon);
-        pokemonDetail.innerHTML += newHtml;  
-    });    
+        pokemonDetail.innerHTML += newHtml;
+        updateProgressBar(pokemon.baseStats);
+    })
+    .then(updateProgressBar(id));
 }
 
 function getQueryParams() {
@@ -69,12 +72,20 @@ function getQueryParams() {
     return params;
 };
 
-window.onload = async () => {
+function updateProgressBar(baseStats) {
+    baseStats.forEach(name => {
+        const progressBar = document.getElementById(`progress-bar-${name[0]}`);
+        
+        if (name[1] > 150) name[1] = 150;
+
+        const progress = (name[1] * 100) / 150;
+        progressBar.style.width = `${progress}%`;
+    });          
+}   
+
+window.onload = () => {
     const { id } = getQueryParams();
-
-    console.log(id)
-
-    loadInfoPokemon(id);
+    loadInfoPokemon(id);   
 }
 
 
