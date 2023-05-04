@@ -8,6 +8,9 @@
 
 2. Abra o arquivo index.html em seu navegador da web.
 
+## **Acessar Aplicação**
+[Deploy Pokedex](https://walkerbrum.github.io/js-developer-pokedex/)
+
 ## Estrutura do projeto
 
 O projeto é composto por duas páginas, a home que é o arquivo index.html e a de detalhes do pokémon que é a pokemon.html. Também é composto por uma pasta assets onde é estão todos os arquivos de css e javascript.
